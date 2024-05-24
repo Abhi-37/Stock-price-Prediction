@@ -1,0 +1,24 @@
+To use this script for other stocks, follow these steps:
+1.	Modify the Stock Symbol: Change the stock symbol in the getSymbols function to the desired stock ticker. For example, to analyze Apple Inc. (AAPL), replace "TCS.NS" with "AAPL".
+df <- getSymbols("AAPL", auto.assign = FALSE, from = '2015-01-01', to = '2024-05-07') 
+2.	Adjust the Date Range: Modify the from and to dates in the getSymbols function to the desired date range for your analysis.
+3.	Run the Script: Execute the script step by step as described above. The same procedures for stationarity checks, model fitting, and forecasting will apply.
+
+
+
+Example for Predicting Apple Inc. (AAPL) Stock Prices
+Here's a quick example to predict AAPL stock prices:
+1.	Modify Stock Symbol and Date Range:
+df <- getSymbols("AAPL", auto.assign = FALSE, from = '2015-01-01', to = '2024-05-07') data_w <- getSymbols("AAPL", auto.assign = FALSE, from = "2015-01-01", to = Sys.Date()) data1 <- data.frame(data_w, date = as.Date(rownames(data.frame(data_w)))) 
+
+2.	Convert to TimeSeries Object:
+AAPL = timeSeries(data1$AAPL.Adjusted, data1$date) 
+
+3.	Follow Remaining Steps: Continue with the same steps for differencing, stationarity checks, model fitting, and forecasting as outlined in the usage section.
+
+
+
+Conclusion
+This script provides a comprehensive approach to time series analysis and forecasting of stock prices. By modifying the stock symbol and date range, users can adapt the script to analyze and forecast the prices of other stocks. Ensure to follow the steps carefully and make necessary adjustments as required for different datasets.
+
+
