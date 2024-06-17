@@ -1,22 +1,37 @@
-# Stock-price-Prediction
-Find stock price Prediction in real time
+# TCS.NS Stock Price Analysis and Forecasting
 
-In this code:
+This repository contains an R script for the time series analysis and forecasting of TCS.NS stock prices. The analysis includes data fetching, time series conversion, differencing, stationarity checks, ARIMA modeling, and forecasting. 
 
-You load necessary libraries like timeSeries, quantmod, and forecast.
+This project demonstrates a complete workflow for analyzing and forecasting stock prices using the `TCS.NS` stock from Yahoo Finance. The steps involved are:
+1. **Data Fetching**: Retrieve historical stock prices for TCS.NS from Yahoo Finance.
+2. **Time Series Conversion**: Convert the fetched data into a `timeSeries` object for analysis.
+3. **Differencing**: Calculate the first differences of the stock prices to make the time series stationary.
+4. **Stationarity Check**: Perform the Augmented Dickey-Fuller test to confirm stationarity.
+5. **Identifying AR and MA Processes**: Plot the Auto-Correlation Function (ACF) and Partial Auto-Correlation Function (PACF) to identify AR and MA components.
+6. **ARIMA Modeling**: Use the `auto.arima` function to find the best fitting ARIMA model.
+7. **Forecasting**: Forecast future stock prices using the identified ARIMA model.
+8. **Visualization**: Plot the actual and forecasted values using `ggplot2`.
 
-We fetch TCS.NS stock data from Yahoo Finance (2015-01-01 to 2024-05-07).
+## Libraries Used
 
-You convert adjusted close prices to a timeSeries object and plot it.
+- `timeSeries`
+- `timeDate`
+- `quantmod`
+- `fUnitRoots`
+- `forecast`
+- `ggplot2`
 
-We calculate first differences to ensure stationarity.
+## Getting Started
 
-You perform an Augmented Dickey-Fuller test for stationarity.
+### Prerequisites
 
-We identify AR and MA processes using ACF and PACF plots.
+Make sure you have the following R packages installed:
 
-You select an ARIMA model using auto.arima and check residuals.
+- timeSeries
+- timeDate
+- quantmod
+- fUnitRoots
+- forecast
+- ggplot2
 
-We generate and plot a 30-day forecast.
 
-You can change the ticker symbol (e.g., "AAPL, HCL.NS, BEL.NS") and dates for your analysis.
