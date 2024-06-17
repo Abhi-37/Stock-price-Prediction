@@ -1,4 +1,4 @@
-# TCS.NS Stock Price Analysis and Forecasting
+# Time Series Analysis and Forecasting of Stock Prices
 
 This repository contains an R script for the time series analysis and forecasting of TCS.NS stock prices. The analysis includes data fetching, time series conversion, differencing, stationarity checks, ARIMA modeling, and forecasting. 
 
@@ -34,4 +34,5 @@ Make sure you have the following R packages installed:
 - forecast
 - ggplot2
 
-
+## Conclusion
+This script provides a systematic approach to time series analysis and forecasting of stock prices. By modifying the stock symbol and date range, users can adapt the script to analyze and forecast the prices of other stocks. Ensure to follow the steps carefully and make necessary adjustments for different datasets.
